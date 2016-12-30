@@ -1,0 +1,54 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+def installedPods
+
+    # Networking
+    pod 'AFNetworking'
+    # pod 'Bolts-Swift'
+    pod 'SwiftyJSON'
+    pod 'ReachabilitySwift'
+    
+    #Facebook
+    # pod 'FacebookCore'
+    # pod 'FacebookLogin'
+    # pod 'FacebookShare'
+
+    # UI
+    # pod 'IoniconsKit'
+    # pod 'IQKeyboardManagerSwift'
+    # pod 'NVActivityIndicatorView'
+    pod 'PureLayout'
+    pod 'Localize-Swift', '~> 1.6'
+    # pod 'AsyncDisplayKit'
+
+    # Logging, Database & Caching
+    # pod 'Crashlytics'
+    # pod 'Fabric'
+    # pod 'PINCache'
+    pod 'RealmSwift'
+    # pod 'Log'
+    pod 'CocoaLumberjack/Swift'
+    
+    # Utilities
+    
+end
+
+target 'SampleProject' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  installedPods
+
+  # Pods for SampleProject
+
+  target 'SampleProjectTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SampleProjectUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
