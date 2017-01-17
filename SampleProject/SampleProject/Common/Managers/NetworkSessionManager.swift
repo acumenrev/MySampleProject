@@ -11,7 +11,7 @@ import AFNetworking
 import SwiftyJSON
 
 class NetworkSessionManager {
-    private var mSessionManager : AFHTTPSessionManager?
+    private var mSessionManager : THTTPSessionManager?
     
     init() {
         
@@ -21,7 +21,7 @@ class NetworkSessionManager {
        self.mSessionManager = nil
     }
     
-    fileprivate var sessionManager : AFHTTPSessionManager {
+    fileprivate var sessionManager : THTTPSessionManager {
         get {
             self.configSessionManager()
             return self.mSessionManager!
@@ -39,7 +39,7 @@ class NetworkSessionManager {
             return
         }
         
-        mSessionManager = AFHTTPSessionManager(baseURL: URL(string: "")!)
+        mSessionManager = THTTPSessionManager(baseURL: URL(string: "")!)
         
         // config request
         mSessionManager?.requestSerializer = AFJSONRequestSerializer(writingOptions: .prettyPrinted)
